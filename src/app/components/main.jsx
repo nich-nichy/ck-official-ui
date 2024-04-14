@@ -246,6 +246,12 @@ const main = () => {
                 </div>
               </div>
               <div>
+                <Typography
+                  variant="body1"
+                  className="text-center hero-section-para font-medium"
+                >
+                  We speak the ultimate print language
+                </Typography>
                 <Search
                   className="border border-gray-400"
                   style={{ width: "400px" }}
@@ -258,12 +264,6 @@ const main = () => {
                     inputProps={{ "aria-label": "search" }}
                   />
                 </Search>
-                <Typography
-                  variant="body1"
-                  className="text-center hero-section-para font-medium"
-                >
-                  We speak the ultimate print language
-                </Typography>
               </div>
 
               {/*               <div className="lg:w-60 w-64 h-96  overflow-hidden rounded-xl ">
@@ -575,6 +575,8 @@ const main = () => {
           </div>
         </div>
       </section>
+      {/* BestSellers */}
+      {/* Trending */}
       {/* Footer */}
       <footer className="border-t text-gray-600 body-font">
         <div className="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
