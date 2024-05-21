@@ -22,6 +22,8 @@ import { AutoComplete } from "antd";
 import { styled, alpha } from "@mui/material/styles";
 import "./main.css";
 
+console.log("Auto complete");
+
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
   borderRadius: theme.shape.borderRadius,
