@@ -4,7 +4,6 @@ import Image from "next/image";
 import {
   IconButton,
   Divider,
-  Menu,
   Avatar,
   Tooltip,
   MenuItem,
@@ -13,19 +12,35 @@ import {
   Box,
   ListItemIcon,
   Typography,
+  Drawer,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemText,
+  Toolbar,
 } from "@mui/material";
-import NotificationsIcon from "@mui/icons-material/Notifications";
-import SearchIcon from "@mui/icons-material/Search";
-import Settings from "@mui/icons-material/Settings";
-import Logout from "@mui/icons-material/Logout";
-import { AutoComplete } from "antd";
-import { styled, alpha } from "@mui/material/styles";
+import {
+  ChevronRight,
+  Logout,
+  Settings,
+  Search,
+  Notifications,
+  Inbox,
+  Mail,
+  Menu,
+  WavingHand,
+  LocalMall,
+  CardGiftcard,
+  AutoAwesome,
+  Event,
+} from "@mui/icons-material";
+import { styled, alpha, useTheme } from "@mui/material/styles";
 import "./main.css";
 
 console.log("Auto complete");
 console.log("Auto complete");
 
-const Search = styled("div")(({ theme }) => ({
+const HeroSearch = styled("div")(({ theme }) => ({
   position: "relative",
   borderRadius: theme.shape.borderRadius,
   backgroundColor: alpha(theme.palette.common.white, 0.15),
@@ -65,12 +80,35 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
+const DrawerHeader = styled("div")(({ theme }) => ({
+  display: "flex",
+  alignItems: "center",
+  padding: theme.spacing(0, 1),
+  // necessary for content to be below app bar
+  ...theme.mixins.toolbar,
+  justifyContent: "flex-start",
+}));
+
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const main = () => {
   const [anchorElUser, setAnchorElUser] = useState(null);
+  const [value, setValue] = useState("");
+  const [options, setOptions] = useState([]);
+  const [anotherOptions, setAnotherOptions] = useState([]);
   const [anchorEl, setAnchorEl] = useState(null);
-  const open = Boolean(anchorEl);
+  const [open, setOpen] = useState(false);
+  const [isLogin, setLogin] = useState(true);
+
+  // const open = Boolean(anchorEl);
+
+  const handleDrawerOpen = () => {
+    setOpen(true);
+  };
+
+  const handleDrawerClose = () => {
+    setOpen(false);
+  };
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -81,10 +119,40 @@ const main = () => {
     setAnchorElUser(event.currentTarget);
   };
 
+  const mockVal = (str, repeat = 1) => ({
+    value: str.repeat(repeat),
+  });
+
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
+  const getPanelValue = (searchText) =>
+    !searchText
+      ? []
+      : [mockVal(searchText), mockVal(searchText, 2), mockVal(searchText, 3)];
+  const onSelect = (data) => {
+    console.log("onSelect", data);
+  };
+  const onChange = (data) => {
+    setValue(data);
+  };
 
+  // Functions
+  const handleLogin = () => {
+    console.log("Hello: ");
+  };
+
+  // Variables
+
+  const drawerWidth = 250;
+  const theme = useTheme();
+  const iconObj = {
+    clothing: <LocalMall />,
+    gifts: <CardGiftcard />,
+    customization: <AutoAwesome />,
+    event: <Event />,
+  };
+  const items = Object.keys(iconObj);
   return (
     <div>
       {/* Navbar */}
@@ -117,8 +185,8 @@ const main = () => {
               Customisation
             </a>
           </nav>
-          <div>
-            <Box sx={{ flexGrow: 0 }}>
+          <Box style={{ marginRight: "0px" }}>
+            <div style={{ marginRight: "10px" }}>
               <IconButton
                 size="large"
                 aria-label="show 17 new notifications"
@@ -126,24 +194,117 @@ const main = () => {
                 style={{ marginTop: "5px" }}
               >
                 <Badge badgeContent={1} color="error">
-                  <NotificationsIcon />
+                  <Notifications />
                 </Badge>
               </IconButton>
-              <Tooltip title="Account settings">
-                <IconButton
-                  onClick={handleClick}
-                  size="small"
-                  sx={{ ml: 2 }}
-                  aria-controls={open ? "account-menu" : undefined}
-                  aria-haspopup="true"
-                  aria-expanded={open ? "true" : undefined}
-                >
-                  <Avatar sx={{ width: 32, height: 32 }}>M</Avatar>
-                </IconButton>
-              </Tooltip>
-            </Box>
-          </div>
-          <Menu
+              <IconButton
+                color="inherit"
+                aria-label="open drawer"
+                edge="end"
+                onClick={handleDrawerOpen}
+                sx={{ ...(open && { display: "none" }) }}
+              >
+                <Menu />
+              </IconButton>
+              <Drawer
+                sx={{
+                  flexShrink: 0,
+                  "& .MuiDrawer-paper": {
+                    width: drawerWidth,
+                  },
+                }}
+                PaperProps={{
+                  sx: {
+                    backgroundColor: "#e5e7eb",
+                  },
+                }}
+                variant="persistent"
+                anchor="right"
+                open={open}
+              >
+                <DrawerHeader>
+                  <IconButton
+                    onClick={handleDrawerClose}
+                    className="border-slate-600 rounded-full hover:bg-slate-400 hover:text-white hover:border-none"
+                  >
+                    {theme.direction === "rtl" ? (
+                      <ChevronLeftIcon />
+                    ) : (
+                      <ChevronRight />
+                    )}
+                  </IconButton>
+                </DrawerHeader>
+                <Divider />
+                {isLogin ? (
+                  <>
+                    <Box>
+                      <div>
+                        <div className="flex mx-1 mt-2">
+                          <h2 className="font-bold text-xl px-2 pr-1">Hello</h2>
+                          <div className="px-2 pl-1">
+                            <WavingHand sx={{ width: 18, height: 18 }} />
+                          </div>
+                        </div>
+                        <div className="flex px-2 py-2 pb-3">
+                          <Avatar
+                            alt="Morris"
+                            src="/static/images/avatar/1.jpg"
+                            sx={{ width: 36, height: 36 }}
+                            className=""
+                          />
+                          <div className="block pl-1">
+                            <p className="" style={{ fontSize: "13px" }}>
+                              Mohamed Nishath
+                            </p>
+                            <p className="" style={{ fontSize: "10px" }}>
+                              nishathmohamed786@gmail.com
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </Box>
+                  </>
+                ) : (
+                  <>
+                    <div>
+                      <button onClick={handleLogin} className="py-4 px-8">
+                        Log in
+                      </button>
+                    </div>
+                  </>
+                )}
+                <Divider />
+                <List>
+                  {items.map((text, index) => (
+                    <ListItem key={text} disablePadding>
+                      <ListItemButton>
+                        <ListItemIcon className="" style={{ color: "#B51F2A" }}>
+                          {iconObj[text]}
+                        </ListItemIcon>
+                        <ListItemText
+                          className="text-sm"
+                          primary={text.charAt(0).toUpperCase() + text.slice(1)}
+                        />
+                      </ListItemButton>
+                    </ListItem>
+                  ))}
+                </List>
+                <Divider />
+                <List>
+                  <ListItem disablePadding>
+                    <ListItemButton>
+                      <ListItemIcon>
+                        <Logout />
+                      </ListItemIcon>
+                      <ListItemText primary="Logout" />
+                    </ListItemButton>
+                  </ListItem>
+                </List>
+                <Divider />
+              </Drawer>
+            </div>
+          </Box>
+          {/*          <Menu
             anchorEl={anchorEl}
             id="account-menu"
             open={open}
@@ -194,10 +355,14 @@ const main = () => {
               </ListItemIcon>
               Logout
             </MenuItem>
-          </Menu>
+          </Menu> */}
         </div>
       </header>
-      <div className="flex justify-center ">
+
+      <div
+        className="flex justify-center"
+        style={{ backgroundImage: "url('/hero-bg.jpg')" }}
+      >
         {/*        <nav className="self-center w-full max-w-7xl  ">
           <div className="flex flex-col lg:flex-row justify-around items-center border-b-2">
             {" "}
@@ -211,73 +376,79 @@ const main = () => {
         </nav> */}
       </div>
       {/* Hero */}
-      <div className="flex justify-center mt-10 my-20">
-        <div className="flex flex-col items-center justify-center">
-          <div className="flex flex-col max-w-7xl justify-center items-center space-y-3 w-full ">
-            <div className="flex flex-col md:items-start items-center justify-center  space-y-3 px-8 text-center ">
-              {/*        <div className="text-3xl md:text-7xl font-bold ">
+      <div>
+        <div
+          className="flex justify-center mt-0 my-20 py-12"
+          // style={{ backgroundImage: "url('/hero-bg.jpg')" }}
+        >
+          <div className="flex flex-col items-center justify-center">
+            <div className="flex flex-col max-w-7xl justify-center items-center space-y-3 w-full ">
+              <div className="flex flex-col md:items-start items-center justify-center  space-y-3 px-8 text-center ">
+                {/*        <div className="text-3xl md:text-7xl font-bold ">
                 Make Your Fashion Look More Charming
               </div> */}
-            </div>
-            <div className="flex flex-col lg:flex-row space-x-2 space-y-3 md:space-x-6   w-full items-center justify-center ">
-              <div className="lg:w-60 w-64 h-96 overflow-hidden rounded-xl">
-                <Image
-                  src="/men1.jpg"
-                  alt=""
-                  className=""
-                  width={300}
-                  height={290}
-                />
               </div>
-              <div className="flex flex-row lg:flex-col space-x-3 space-y-6 items-center justify-center">
-                <div className="w-32 lg:w-40 h-32  overflow-hidden rounded-xl ">
+              <div className="flex flex-col lg:flex-row space-x-2 space-y-3 md:space-x-6   w-full items-center justify-center ">
+                <div className="lg:w-60 w-64 h-96 overflow-hidden rounded-xl">
                   <Image
-                    src="/men4.jpg"
+                    src="/men1.jpg"
                     alt=""
                     className=""
-                    width={150}
-                    height={250}
+                    width={300}
+                    height={290}
                   />
                 </div>
-                <div className="w-32 lg:w-40 h-48  overflow-hidden rounded-xl ">
-                  <Image
-                    src="/men2.jpg"
-                    alt=""
-                    className=""
-                    width={150}
-                    height={450}
-                  />
+                <div className="flex flex-row lg:flex-col space-x-3 space-y-6 items-center justify-center">
+                  <div className="w-32 lg:w-40 h-32  overflow-hidden rounded-xl ">
+                    <Image
+                      src="/men4.jpg"
+                      alt=""
+                      className=""
+                      width={150}
+                      height={250}
+                    />
+                  </div>
+                  <div className="w-32 lg:w-40 h-48  overflow-hidden rounded-xl ">
+                    <Image
+                      src="/men2.jpg"
+                      alt=""
+                      className=""
+                      width={150}
+                      height={450}
+                    />
+                  </div>
                 </div>
-              </div>
-              <div>
-                <Image
+                <div className="" style={{ marginTop: "-4rem" }}>
+                  {/*      <Image
                   src="/ck-logo-salsa.png"
                   alt=""
                   className=""
                   width={150}
                   height={250}
-                />
-                <Typography
-                  variant="body1"
-                  className="text-center hero-section-para font-medium"
-                >
-                  We speak the ultimate print language
-                </Typography>
-                <Search
-                  className="border border-gray-400"
-                  style={{ width: "400px" }}
-                >
-                  <SearchIconWrapper>
-                    <SearchIcon />
-                  </SearchIconWrapper>
-                  <StyledInputBase
-                    placeholder="Search"
-                    inputProps={{ "aria-label": "search" }}
-                  />
-                </Search>
-              </div>
+                /> */}
+                  <div className="top-0">
+                    <Typography
+                      variant="body1"
+                      className="text-center hero-section-para font-medium"
+                    >
+                      We speak the ultimate print language
+                    </Typography>
+                    <HeroSearch
+                      className="border border-gray-400"
+                      style={{ width: "400px" }}
+                    >
+                      <SearchIconWrapper>
+                        <Search />
+                      </SearchIconWrapper>
+                      <StyledInputBase
+                        placeholder="Search"
+                        inputProps={{ "aria-label": "search" }}
+                      />
+                    </HeroSearch>
+                  </div>
+                </div>
 
-              {/*               <div className="lg:w-60 w-64 h-96  overflow-hidden rounded-xl ">
+                {/*               <div className="lg:w-60 w-64 h-96  overflow-hidden rounded-xl ">
                 <Image
                   src="https://source.unsplash.com/random/300x500/?man
                                     
@@ -287,35 +458,36 @@ const main = () => {
                 />
               </div> */}
 
-              <div className="flex flex-row lg:flex-col space-x-3 space-y-6 items-center justify-center ">
-                <div className="w-32 lg:w-40 h-48  overflow-hidden rounded-xl ">
+                <div className="flex flex-row lg:flex-col space-x-3 space-y-6 items-center justify-center ">
+                  <div className="w-32 lg:w-40 h-48  overflow-hidden rounded-xl ">
+                    <Image
+                      src="/wom1.jpg"
+                      alt=""
+                      className=""
+                      width={150}
+                      height={450}
+                    />
+                  </div>
+                  <div className="w-32 lg:w-40 h-32  overflow-hidden rounded-xl ">
+                    <Image
+                      src="/wom3.jpg"
+                      alt=""
+                      className=""
+                      width={150}
+                      height={250}
+                    />
+                  </div>
+                </div>
+                {/*  */}
+                <div className="lg:w-60 w-64 h-96 overflow-hidden rounded-xl">
                   <Image
-                    src="/wom1.jpg"
+                    src="/wom2.jpg"
                     alt=""
                     className=""
-                    width={150}
-                    height={450}
+                    width={200}
+                    height={10}
                   />
                 </div>
-                <div className="w-32 lg:w-40 h-32  overflow-hidden rounded-xl ">
-                  <Image
-                    src="/wom3.jpg"
-                    alt=""
-                    className=""
-                    width={150}
-                    height={250}
-                  />
-                </div>
-              </div>
-              {/*  */}
-              <div className="lg:w-60 w-64 h-96 overflow-hidden rounded-xl">
-                <Image
-                  src="/wom2.jpg"
-                  alt=""
-                  className=""
-                  width={200}
-                  height={10}
-                />
               </div>
             </div>
           </div>
