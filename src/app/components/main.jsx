@@ -185,8 +185,8 @@ const main = () => {
               Customisation
             </a>
           </nav>
-          <Box style={{ marginRight: "0px" }}>
-            <div style={{ marginRight: "10px" }}>
+          <Box>
+            <div>
               <IconButton
                 size="large"
                 aria-label="show 17 new notifications"
@@ -206,102 +206,124 @@ const main = () => {
               >
                 <Menu />
               </IconButton>
-              <Drawer
+              <Box
                 sx={{
-                  flexShrink: 0,
-                  "& .MuiDrawer-paper": {
-                    width: drawerWidth,
-                  },
+                  position: "fixed",
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                  backgroundColor: open ? "rgba(0, 0, 0, 0.5)" : "transparent",
+                  backdropFilter: open ? "blur(5px)" : "none",
+                  zIndex: 1200, // Ensure it covers the page but is behind the Drawer
+                  pointerEvents: open ? "auto" : "none", // Makes sure the backdrop is only clickable when open
                 }}
-                PaperProps={{
-                  sx: {
-                    backgroundColor: "#e5e7eb",
-                  },
-                }}
-                variant="persistent"
-                anchor="right"
-                open={open}
               >
-                <DrawerHeader>
-                  <IconButton
-                    onClick={handleDrawerClose}
-                    className="border-slate-600 rounded-full hover:bg-slate-400 hover:text-white hover:border-none"
-                  >
-                    {theme.direction === "rtl" ? (
-                      <ChevronLeftIcon />
-                    ) : (
-                      <ChevronRight />
-                    )}
-                  </IconButton>
-                </DrawerHeader>
-                <Divider />
-                {isLogin ? (
-                  <>
-                    <Box>
+                {" "}
+                <Drawer
+                  sx={{
+                    flexShrink: 0,
+                    "& .MuiDrawer-paper": {
+                      width: drawerWidth,
+                    },
+                  }}
+                  PaperProps={{
+                    sx: {
+                      backgroundColor: "#e5e7eb",
+                    },
+                  }}
+                  variant="persistent"
+                  anchor="right"
+                  open={open}
+                >
+                  <DrawerHeader>
+                    <IconButton
+                      onClick={handleDrawerClose}
+                      className="border-slate-600 rounded-full hover:bg-slate-400 hover:text-white hover:border-none"
+                    >
+                      {theme.direction === "rtl" ? (
+                        <ChevronLeftIcon />
+                      ) : (
+                        <ChevronRight />
+                      )}
+                    </IconButton>
+                  </DrawerHeader>
+                  <Divider />
+                  {isLogin ? (
+                    <>
+                      <Box>
+                        <div>
+                          <div className="flex mx-1 mt-2">
+                            <h2 className="font-bold text-xl px-2 pr-1">
+                              Hello
+                            </h2>
+                            <div className="px-2 pl-1">
+                              <WavingHand sx={{ width: 18, height: 18 }} />
+                            </div>
+                          </div>
+                          <div className="flex px-2 py-2 pb-3">
+                            <Avatar
+                              alt="Morris"
+                              src="/static/images/avatar/1.jpg"
+                              sx={{ width: 36, height: 36 }}
+                              className=""
+                            />
+                            <div className="block pl-1">
+                              <p className="" style={{ fontSize: "13px" }}>
+                                Mohamed Nishath
+                              </p>
+                              <p className="" style={{ fontSize: "10px" }}>
+                                nishathmohamed786@gmail.com
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </Box>
+                    </>
+                  ) : (
+                    <>
                       <div>
-                        <div className="flex mx-1 mt-2">
-                          <h2 className="font-bold text-xl px-2 pr-1">Hello</h2>
-                          <div className="px-2 pl-1">
-                            <WavingHand sx={{ width: 18, height: 18 }} />
-                          </div>
-                        </div>
-                        <div className="flex px-2 py-2 pb-3">
-                          <Avatar
-                            alt="Morris"
-                            src="/static/images/avatar/1.jpg"
-                            sx={{ width: 36, height: 36 }}
-                            className=""
-                          />
-                          <div className="block pl-1">
-                            <p className="" style={{ fontSize: "13px" }}>
-                              Mohamed Nishath
-                            </p>
-                            <p className="" style={{ fontSize: "10px" }}>
-                              nishathmohamed786@gmail.com
-                            </p>
-                          </div>
-                        </div>
+                        <button onClick={handleLogin} className="py-4 px-8">
+                          Log in
+                        </button>
                       </div>
-                    </Box>
-                  </>
-                ) : (
-                  <>
-                    <div>
-                      <button onClick={handleLogin} className="py-4 px-8">
-                        Log in
-                      </button>
-                    </div>
-                  </>
-                )}
-                <Divider />
-                <List>
-                  {items.map((text, index) => (
-                    <ListItem key={text} disablePadding>
+                    </>
+                  )}
+                  <Divider />
+                  <List>
+                    {items.map((text, index) => (
+                      <ListItem key={text} disablePadding>
+                        <ListItemButton>
+                          <ListItemIcon
+                            className=""
+                            style={{ color: "#B51F2A" }}
+                          >
+                            {iconObj[text]}
+                          </ListItemIcon>
+                          <ListItemText
+                            className="text-sm"
+                            primary={
+                              text.charAt(0).toUpperCase() + text.slice(1)
+                            }
+                          />
+                        </ListItemButton>
+                      </ListItem>
+                    ))}
+                  </List>
+                  <Divider />
+                  <List>
+                    <ListItem disablePadding>
                       <ListItemButton>
-                        <ListItemIcon className="" style={{ color: "#B51F2A" }}>
-                          {iconObj[text]}
+                        <ListItemIcon>
+                          <Logout />
                         </ListItemIcon>
-                        <ListItemText
-                          className="text-sm"
-                          primary={text.charAt(0).toUpperCase() + text.slice(1)}
-                        />
+                        <ListItemText primary="Logout" />
                       </ListItemButton>
                     </ListItem>
-                  ))}
-                </List>
-                <Divider />
-                <List>
-                  <ListItem disablePadding>
-                    <ListItemButton>
-                      <ListItemIcon>
-                        <Logout />
-                      </ListItemIcon>
-                      <ListItemText primary="Logout" />
-                    </ListItemButton>
-                  </ListItem>
-                </List>
-                <Divider />
-              </Drawer>
+                  </List>
+                  <Divider />
+                </Drawer>
+              </Box>
             </div>
           </Box>
           {/*          <Menu
@@ -468,7 +490,7 @@ const main = () => {
                       height={450}
                     />
                   </div>
-                  <div className="w-32 lg:w-40 h-32  overflow-hidden rounded-xl ">
+                  <div className="w-32 lg:w-40 h-32 overflow-hidden rounded-xl ">
                     <Image
                       src="/wom3.jpg"
                       alt=""
