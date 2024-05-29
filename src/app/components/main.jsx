@@ -5,7 +5,6 @@ import { InputBase, Typography } from "@mui/material";
 import { Search } from "@mui/icons-material";
 import { styled, alpha, useTheme } from "@mui/material/styles";
 import { Navbar } from "./partitions";
-// import Navbar from "./partitions/navbar";
 import { useSelector, useDispatch } from "react-redux";
 import "./main.css";
 
@@ -42,7 +41,6 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   color: "inherit",
   "& .MuiInputBase-input": {
     padding: theme.spacing(1, 1, 1, 0),
-    // vertical padding + font size from searchIcon
     paddingLeft: `calc(1em + ${theme.spacing(4)})`,
     transition: theme.transitions.create("width"),
     width: "100%",
@@ -53,41 +51,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 const main = () => {
-  const [anchorElUser, setAnchorElUser] = useState(null);
-  const [value, setValue] = useState("");
-  const [options, setOptions] = useState([]);
-  const [anotherOptions, setAnotherOptions] = useState([]);
-  const [anchorEl, setAnchorEl] = useState(null);
-
   // const open = Boolean(anchorEl);
-
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
-
-  const mockVal = (str, repeat = 1) => ({
-    value: str.repeat(repeat),
-  });
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
-  const getPanelValue = (searchText) =>
-    !searchText
-      ? []
-      : [mockVal(searchText), mockVal(searchText, 2), mockVal(searchText, 3)];
-  const onSelect = (data) => {
-    console.log("onSelect", data);
-  };
-  const onChange = (data) => {
-    setValue(data);
-  };
 
   // Functions
   const handleLogin = () => {
@@ -95,14 +59,14 @@ const main = () => {
   };
 
   // Variables
-  const theme = useTheme();
-  const isLogin = useSelector((state) => state.authenticationSlice);
+
+  const isLogin = useSelector((state) => state.authentication.isLoggedIn);
   console.log({ isLogin });
 
   return (
     <div>
       {/* Navbar */}
-      <Navbar theme handleDrawerOpen handleDrawerClose isLogin />
+      <Navbar handleDrawerOpen handleDrawerClose isLogin />
       {/* Hero */}
       <div>
         <div
@@ -175,17 +139,6 @@ const main = () => {
                     </HeroSearch>
                   </div>
                 </div>
-
-                {/*               <div className="lg:w-60 w-64 h-96  overflow-hidden rounded-xl ">
-                <Image
-                  src="https://source.unsplash.com/random/300x500/?man
-                                    
-                                                            "
-                  alt=""
-                  className=""
-                />
-              </div> */}
-
                 <div className="flex flex-row lg:flex-col space-x-3 space-y-6 items-center justify-center ">
                   <div className="w-32 lg:w-40 h-48  overflow-hidden rounded-xl ">
                     <Image

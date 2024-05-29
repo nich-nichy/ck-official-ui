@@ -24,21 +24,23 @@ import {
   Event,
 } from "@mui/icons-material";
 import Image from "next/image";
-import { styled, alpha, useTheme } from "@mui/material/styles";
+import { useSelector, useDispatch } from "react-redux";
+import { styled, useTheme } from "@mui/material/styles";
 
-const navbar = ({ theme, isLogin }) => {
+const navbar = () => {
   const [open, setOpen] = useState(false);
-
+  const theme = useTheme();
   const DrawerHeader = styled("div")(({ theme }) => ({
     display: "flex",
     alignItems: "center",
     padding: theme.spacing(0, 1),
-    // necessary for content to be below app bar
     ...theme.mixins.toolbar,
     justifyContent: "flex-start",
   }));
 
-  const settings = ["Profile", "Account", "Dashboard", "Logout"];
+  const isLogin = useSelector((state) => state.authentication.isLoggedIn);
+  console.log({ isLogin }, "from navvv");
+
   const drawerWidth = 250;
 
   const iconObj = {
@@ -48,6 +50,10 @@ const navbar = ({ theme, isLogin }) => {
     event: <Event />,
   };
   const items = Object.keys(iconObj);
+
+  const handleLogin = () => {
+    console.log("Hello: ");
+  };
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -144,7 +150,7 @@ const navbar = ({ theme, isLogin }) => {
                     </IconButton>
                   </DrawerHeader>
                   <Divider />
-                  {isLogin ? (
+                  {isLogin === true ? (
                     <>
                       <Box>
                         <div>
@@ -178,7 +184,10 @@ const navbar = ({ theme, isLogin }) => {
                   ) : (
                     <>
                       <div>
-                        <button onClick={handleLogin} className="py-4 px-8">
+                        <button
+                          onClick={() => handleLogin()}
+                          className="py-4 px-8"
+                        >
                           Log in
                         </button>
                       </div>
