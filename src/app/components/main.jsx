@@ -215,8 +215,8 @@ const main = () => {
                   bottom: 0,
                   backgroundColor: open ? "rgba(0, 0, 0, 0.5)" : "transparent",
                   backdropFilter: open ? "blur(5px)" : "none",
-                  zIndex: 1200, // Ensure it covers the page but is behind the Drawer
-                  pointerEvents: open ? "auto" : "none", // Makes sure the backdrop is only clickable when open
+                  zIndex: 1200,
+                  pointerEvents: open ? "auto" : "none",
                 }}
               >
                 {" "}
@@ -383,7 +383,7 @@ const main = () => {
 
       <div
         className="flex justify-center"
-        style={{ backgroundImage: "url('/hero-bg.jpg')" }}
+        // style={{ backgroundImage: "url('/CK-Banner.jpg')" }}
       >
         {/*        <nav className="self-center w-full max-w-7xl  ">
           <div className="flex flex-col lg:flex-row justify-around items-center border-b-2">
@@ -401,7 +401,7 @@ const main = () => {
       <div>
         <div
           className="flex justify-center mt-0 my-20 py-12"
-          // style={{ backgroundImage: "url('/hero-bg.jpg')" }}
+          // style={{ backgroundImage: "url('/CK-Banner.jpg')" }}
         >
           <div className="flex flex-col items-center justify-center">
             <div className="flex flex-col max-w-7xl justify-center items-center space-y-3 w-full ">
