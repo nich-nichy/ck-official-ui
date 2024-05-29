@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
 
 main {
     font-family: "Montserrat", sans-serif;
@@ -8,4 +8,12 @@ main {
     font-family: "Montserrat", sans-serif;
     font-size: 26px;
     margin-top: 20px;
+}
+
+.offer-info-above {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px 0px 10px 0px;
+    width: 100%;
 }
