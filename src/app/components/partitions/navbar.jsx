@@ -26,6 +26,7 @@ import {
 import Image from "next/image";
 import { useSelector, useDispatch } from "react-redux";
 import { styled, useTheme } from "@mui/material/styles";
+import "../main.css";
 
 const navbar = () => {
   const [open, setOpen] = useState(false);
@@ -75,7 +76,7 @@ const navbar = () => {
             height={90}
             alt="Picture of the author"
           />
-          <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+          <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center hidden sm:block">
             <a className="mr-5 text-gray-500 hover:text-stone-900 text-sm transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
               Products
             </a>

@@ -73,7 +73,7 @@ const main = () => {
           <div className="flex flex-col items-center justify-center">
             <div className="flex flex-col max-w-7xl justify-center items-center space-y-3 w-full ">
               <div className="flex flex-col md:flex-row lg:flex-row space-x-2 space-y-3 md:space-x-4 w-full items-center justify-center ">
-                <div className="lg:w-40 w-64 h-96 overflow-hidden rounded-xl hero-lg-img-wrapper">
+                <div className="lg:w-40 w-18 h-32 overflow-hidden rounded-xl hero-lg-img-wrapper">
                   <Image
                     src="/Images/Hero/tshirt-anime.jpeg"
                     alt=""
