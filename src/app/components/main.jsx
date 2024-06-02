@@ -68,103 +68,11 @@ const main = () => {
       {/* Navbar */}
       <Navbar handleDrawerOpen handleDrawerClose isLogin />
       {/* Hero */}
-
-      {/*   <div>
-        <div className="flex justify-center my-10">
-          <div className="flex flex-col items-center justify-center">
-            <div className="flex flex-col max-w-7xl justify-center items-center space-y-3 w-full md:w-2xl">
-              <div className="flex flex-col items-center md:items-start justify-center space-y-3 px-8 text-center md:text-left"></div>
-              <div className="flex flex-col lg:flex-row space-y-3 lg:space-y-0 lg:space-x-6 w-full items-center justify-center">
-                <div className="w-64 h-96 lg:w-60 overflow-hidden rounded-xl">
-                  <Image
-                    src="/men1.jpg"
-                    alt=""
-                    className=""
-                    width={300}
-                    height={290}
-                  />
-                </div>
-                <div className="flex flex-row lg:flex-col space-x-3 space-y-6 items-center justify-center">
-                  <div className="w-32 lg:w-40 h-32  overflow-hidden rounded-xl ">
-                    <Image
-                      src="/men4.jpg"
-                      alt=""
-                      className="hero-md-img-small"
-                      width={150}
-                      height={250}
-                    />
-                  </div>
-                  <div className="w-32 lg:w-40 h-48  overflow-hidden rounded-xl ">
-                    <Image
-                      src="/men2.jpg"
-                      alt=""
-                      className="hero-md-img-big"
-                      width={150}
-                      height={450}
-                    />
-                  </div>
-                </div>
-                <div className="" style={{ marginTop: "-4rem" }}>
-                  <div className="top-0">
-                    <Typography
-                      variant="body1"
-                      className="text-center hero-section-para"
-                    >
-                      We speak the ultimate print language
-                    </Typography>
-                    <HeroSearch
-                      className="border border-gray-400"
-                      style={{ width: "400px" }}
-                    >
-                      <SearchIconWrapper>
-                        <Search />
-                      </SearchIconWrapper>
-                      <StyledInputBase
-                        placeholder="Search"
-                        inputProps={{ "aria-label": "search" }}
-                      />
-                    </HeroSearch>
-                  </div>
-                </div>
-                <div className="flex flex-row lg:flex-col space-x-3 space-y-6 items-center justify-center ">
-                  <div className="w-32 lg:w-40 h-48  overflow-hidden rounded-xl ">
-                    <Image
-                      src="/wom1.jpg"
-                      alt=""
-                      className="hero-md-img-big"
-                      width={150}
-                      height={450}
-                    />
-                  </div>
-                  <div className="w-32 lg:w-40 h-32 overflow-hidden rounded-xl ">
-                    <Image
-                      src="/wom3.jpg"
-                      alt=""
-                      className="hero-md-img-small"
-                      width={150}
-                      height={250}
-                    />
-                  </div>
-                </div>
-                <div className="lg:w-60 w-64 h-96 overflow-hidden rounded-xl">
-                  <Image
-                    src="/wom2.jpg"
-                    alt=""
-                    className="hero-lg-img"
-                    width={200}
-                    height={10}
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
       <div className="mt-5">
         <div className="flex justify-center">
           <div className="flex flex-col items-center justify-center">
-            <div className="flex flex-col  max-w-7xl justify-center items-center space-y-3 w-full ">
-              <div className="flex flex-col lg:flex-row space-x-2 space-y-3 md:space-x-6   w-full items-center justify-center ">
+            <div className="flex flex-col max-w-7xl justify-center items-center space-y-3 w-full ">
+              <div className="flex flex-col md:flex-row lg:flex-row space-x-2 space-y-3 md:space-x-4 w-full items-center justify-center ">
                 <div className="lg:w-40 w-64 h-96 overflow-hidden rounded-xl hero-lg-img-wrapper">
                   <Image
                     src="/Images/Hero/tshirt-anime.jpeg"
@@ -174,7 +82,7 @@ const main = () => {
                     height={290}
                   />
                 </div>
-                <div className="flex flex-row lg:flex-col space-x-3 space-y-6 items-center justify-center">
+                <div className="flex flex-row md:flex-col lg:flex-col space-x-3 space-y-6 items-center justify-center">
                   <div className="lg:w-40 h-32 overflow-hidden rounded-xl hero-md-img-small">
                     <Image
                       src="/Images/Hero/random-gift.jpeg"
@@ -215,7 +123,7 @@ const main = () => {
                     </div>
                   </div>
                 </div>
-                <div className="flex flex-row lg:flex-col space-x-3 space-y-6 items-center justify-center ">
+                <div className="flex flex-row md:flex-col lg:flex-col space-x-3 space-y-6 items-center justify-center ">
                   <div className="w-32 lg:w-40 overflow-hidden rounded-xl hero-md-img-big">
                     <Image
                       src="/Images/Hero/hoodie1.jpeg"

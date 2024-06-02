@@ -36,16 +36,68 @@ main {
     .offer-info-above {
         padding: 10px 0px;
     }
+
+    .hero-lg-img-wrapper {
+        width: 95px !important;
+        height: 170px !important;
+    }
+
+    .hero-lg-img {
+        width: 115px !important;
+        height: 170px !important;
+    }
+
+    .hero-md-img-small {
+        width: 100px !important;
+        height: 130px !important;
+        margin-left: auto;
+    }
+
+    .hero-md-img-big {
+        width: 95px !important;
+        height: 150px !important;
+    }
+
+    .hero-explainer-wrapper {
+        margin-top: -100px;
+        width: 250px;
+    }
 }
 
 @media (min-width: 601px) and (max-width: 900px) {
     .hero-section-para {
-        font-size: 22px;
+        font-size: 20px !important;
         margin-top: 15px;
     }
 
     .offer-info-above {
         padding: 10px 0px;
+    }
+
+    .hero-lg-img-wrapper {
+        width: 95px !important;
+        height: 170px !important;
+    }
+
+    .hero-lg-img {
+        width: 115px !important;
+        height: 170px !important;
+    }
+
+    .hero-md-img-small {
+        width: 100px !important;
+        height: 130px !important;
+        margin-left: auto;
+    }
+
+    .hero-md-img-big {
+        width: 95px !important;
+        height: 150px !important;
+    }
+
+    .hero-explainer-wrapper {
+        margin-top: -100px;
+        width: 250px;
     }
 }
 
@@ -71,18 +123,19 @@ main {
     }
 
     .hero-md-img-small {
-        width: 120px !important;
+        width: 130px !important;
         height: 130px !important;
+        margin-left: auto;
     }
 
     .hero-md-img-big {
-        width: 100px !important;
-        height: 250px !important;
+        width: 130px !important;
+        height: 150px !important;
     }
 
     .hero-explainer-wrapper {
         margin-top: -100px;
-        width: 220px;
+        width: 300px;
     }
 
 }
@@ -95,5 +148,31 @@ main {
 
     .offer-info-above {
         padding: 10px 0px;
+    }
+
+    .hero-lg-img-wrapper {
+        width: 200px !important;
+        height: 300px !important;
+    }
+
+    .hero-lg-img {
+        width: 200px !important;
+        height: 300px !important;
+    }
+
+    .hero-md-img-small {
+        width: 150px !important;
+        height: 150px !important;
+        margin-left: auto;
+    }
+
+    .hero-md-img-big {
+        width: 150px !important;
+        height: 170px !important;
+    }
+
+    .hero-explainer-wrapper {
+        margin-top: -100px;
+        width: 450px;
     }
 }
