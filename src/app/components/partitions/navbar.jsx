@@ -67,7 +67,7 @@ const navbar = () => {
       <p className="offer-info-above">
         Get 10% off on all products when buying 2 or more products{" "}
       </p>{" "}
-      <header className="text-gray-600 body-font">
+      <header className="text-gray-600 body-font border-b border-solid border-gray-400">
         <div className="container mx-auto border-b flex flex-wrap p-5 flex-col md:flex-row items-center">
           <Image
             src="/ck-logo-salsa.png"

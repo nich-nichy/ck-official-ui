@@ -68,20 +68,14 @@ const main = () => {
       {/* Navbar */}
       <Navbar handleDrawerOpen handleDrawerClose isLogin />
       {/* Hero */}
-      <div>
-        <div
-          className="flex justify-center mt-0 my-20 py-12"
-          // style={{ backgroundImage: "url('/CK-Banner.jpg')" }}
-        >
+
+      {/*   <div>
+        <div className="flex justify-center my-10">
           <div className="flex flex-col items-center justify-center">
-            <div className="flex flex-col max-w-7xl justify-center items-center space-y-3 w-full ">
-              <div className="flex flex-col md:items-start items-center justify-center  space-y-3 px-8 text-center ">
-                {/*        <div className="text-3xl md:text-7xl font-bold ">
-                Make Your Fashion Look More Charming
-              </div> */}
-              </div>
-              <div className="flex flex-col lg:flex-row space-x-2 space-y-3 md:space-x-6   w-full items-center justify-center ">
-                <div className="lg:w-60 w-64 h-96 overflow-hidden rounded-xl">
+            <div className="flex flex-col max-w-7xl justify-center items-center space-y-3 w-full md:w-2xl">
+              <div className="flex flex-col items-center md:items-start justify-center space-y-3 px-8 text-center md:text-left"></div>
+              <div className="flex flex-col lg:flex-row space-y-3 lg:space-y-0 lg:space-x-6 w-full items-center justify-center">
+                <div className="w-64 h-96 lg:w-60 overflow-hidden rounded-xl">
                   <Image
                     src="/men1.jpg"
                     alt=""
@@ -95,7 +89,7 @@ const main = () => {
                     <Image
                       src="/men4.jpg"
                       alt=""
-                      className=""
+                      className="hero-md-img-small"
                       width={150}
                       height={250}
                     />
@@ -104,20 +98,13 @@ const main = () => {
                     <Image
                       src="/men2.jpg"
                       alt=""
-                      className=""
+                      className="hero-md-img-big"
                       width={150}
                       height={450}
                     />
                   </div>
                 </div>
                 <div className="" style={{ marginTop: "-4rem" }}>
-                  {/*      <Image
-                  src="/ck-logo-salsa.png"
-                  alt=""
-                  className=""
-                  width={150}
-                  height={250}
-                /> */}
                   <div className="top-0">
                     <Typography
                       variant="body1"
@@ -144,7 +131,7 @@ const main = () => {
                     <Image
                       src="/wom1.jpg"
                       alt=""
-                      className=""
+                      className="hero-md-img-big"
                       width={150}
                       height={450}
                     />
@@ -153,18 +140,17 @@ const main = () => {
                     <Image
                       src="/wom3.jpg"
                       alt=""
-                      className=""
+                      className="hero-md-img-small"
                       width={150}
                       height={250}
                     />
                   </div>
                 </div>
-                {/*  */}
                 <div className="lg:w-60 w-64 h-96 overflow-hidden rounded-xl">
                   <Image
                     src="/wom2.jpg"
                     alt=""
-                    className=""
+                    className="hero-lg-img"
                     width={200}
                     height={10}
                   />
@@ -173,7 +159,99 @@ const main = () => {
             </div>
           </div>
         </div>
+      </div> */}
+      <div className="mt-5">
+        <div className="flex justify-center">
+          <div className="flex flex-col items-center justify-center">
+            <div className="flex flex-col  max-w-7xl justify-center items-center space-y-3 w-full ">
+              <div className="flex flex-col lg:flex-row space-x-2 space-y-3 md:space-x-6   w-full items-center justify-center ">
+                <div className="lg:w-40 w-64 h-96 overflow-hidden rounded-xl hero-lg-img-wrapper">
+                  <Image
+                    src="/Images/Hero/tshirt-anime.jpeg"
+                    alt=""
+                    className="hero-lg-img"
+                    width={300}
+                    height={290}
+                  />
+                </div>
+                <div className="flex flex-row lg:flex-col space-x-3 space-y-6 items-center justify-center">
+                  <div className="lg:w-40 h-32 overflow-hidden rounded-xl hero-md-img-small">
+                    <Image
+                      src="/Images/Hero/random-gift.jpeg"
+                      alt=""
+                      className=""
+                      width={150}
+                      height={250}
+                    />
+                  </div>
+                  <div className="w-3 lg:w-40 h-48 overflow-hidden rounded-xl hero-md-img-big">
+                    <Image
+                      src="/Images/Hero/hoodie.jpeg"
+                      alt=""
+                      className=""
+                      width={150}
+                      height={450}
+                    />
+                  </div>
+                </div>
+                <div className="hero-explainer-wrapper">
+                  <div className="flex">
+                    <div className="top-0">
+                      <Typography
+                        variant="body1"
+                        className="text-center hero-section-para"
+                      >
+                        We speak the ultimate print launguage
+                      </Typography>
+                      <HeroSearch className="border border-gray-400">
+                        <SearchIconWrapper>
+                          <Search />
+                        </SearchIconWrapper>
+                        <StyledInputBase
+                          placeholder="Search"
+                          inputProps={{ "aria-label": "search" }}
+                        />
+                      </HeroSearch>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex flex-row lg:flex-col space-x-3 space-y-6 items-center justify-center ">
+                  <div className="w-32 lg:w-40 overflow-hidden rounded-xl hero-md-img-big">
+                    <Image
+                      src="/Images/Hero/hoodie1.jpeg"
+                      alt=""
+                      className=""
+                      width={150}
+                      height={450}
+                    />
+                  </div>
+                  <div className="w-32 lg:w-40 ero-lg--32  overflow-hidden rounded-xl hero-md-img-small">
+                    <Image
+                      src="/Images/Hero/gift-pack.jpeg"
+                      alt=""
+                      className=""
+                      width={150}
+                      height={250}
+                    />
+                  </div>
+                </div>
+                <div className="lg:w-40 w-64 h-96  overflow-hidden rounded-xl hero-lg-img-wrapper">
+                  <Image
+                    src="/Images/Hero/birthday.jpeg"
+                    alt=""
+                    className="hero-lg-img"
+                    width={300}
+                    height={180}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://use.fontawesome.com/03f8a0ebd4.js"></script>
       </div>
+
       {/* Explainer */}
       <div
         className="border-b text-white my-20"
@@ -188,179 +266,179 @@ const main = () => {
       </div>
       {/* Events */}
       <section
-        class="text-gray-600 body-font"
+        className="text-gray-600 body-font"
         style={{ marginLeft: "150px", marginRight: "150px" }}
       >
-        <div class="container px-5 py-24 mx-auto">
-          <div class="flex flex-col text-center w-full mb-20">
-            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
+        <div className="container px-5 py-24 mx-auto">
+          <div className="flex flex-col text-center w-full mb-20">
+            <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
               Products
             </h1>
-            <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
+            <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
               Here are our Products
             </p>
           </div>
-          <div class="text-gray-600 body-font">
-            <div class="container px-5 py-24 mx-auto">
-              <div class="flex flex-wrap -m-4">
-                <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-                  <a class="block relative h-48 rounded overflow-hidden">
+          <div className="text-gray-600 body-font">
+            <div className="container px-5 py-24 mx-auto">
+              <div className="flex flex-wrap -m-4">
+                <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
+                  <a className="block relative h-48 rounded overflow-hidden">
                     <Image
                       alt="ecommerce"
-                      class="object-cover object-center w-full h-full block"
+                      className="object-cover object-center w-full h-full block"
                       src="/wom2.jpg"
                       width={200}
                       height={200}
                     />
                   </a>
-                  <div class="mt-4">
-                    <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">
+                  <div className="mt-4">
+                    <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">
                       CATEGORY
                     </h3>
-                    <h2 class="text-gray-900 title-font text-lg font-medium">
+                    <h2 className="text-gray-900 title-font text-lg font-medium">
                       The Catalyzer
                     </h2>
-                    <p class="mt-1">$16.00</p>
+                    <p className="mt-1">$16.00</p>
                   </div>
                 </div>
-                <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-                  <a class="block relative h-48 rounded overflow-hidden">
+                <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
+                  <a className="block relative h-48 rounded overflow-hidden">
                     <Image
                       alt="ecommerce"
-                      class="object-cover object-center w-full h-full block"
+                      className="object-cover object-center w-full h-full block"
                       src="/wom1.jpg"
                       width={200}
                       height={200}
                     />
                   </a>
-                  <div class="mt-4">
-                    <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">
+                  <div className="mt-4">
+                    <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">
                       CATEGORY
                     </h3>
-                    <h2 class="text-gray-900 title-font text-lg font-medium">
+                    <h2 className="text-gray-900 title-font text-lg font-medium">
                       Shooting Stars
                     </h2>
-                    <p class="mt-1">$21.15</p>
+                    <p className="mt-1">$21.15</p>
                   </div>
                 </div>
-                <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-                  <a class="block relative h-48 rounded overflow-hidden">
+                <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
+                  <a className="block relative h-48 rounded overflow-hidden">
                     <Image
                       alt="ecommerce"
-                      class="object-cover object-center w-full h-full block"
+                      className="object-cover object-center w-full h-full block"
                       src="/wom3.jpg"
                       width={200}
                       height={200}
                     />
                   </a>
-                  <div class="mt-4">
-                    <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">
+                  <div className="mt-4">
+                    <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">
                       CATEGORY
                     </h3>
-                    <h2 class="text-gray-900 title-font text-lg font-medium">
+                    <h2 className="text-gray-900 title-font text-lg font-medium">
                       Neptune
                     </h2>
-                    <p class="mt-1">$12.00</p>
+                    <p className="mt-1">$12.00</p>
                   </div>
                 </div>
-                <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-                  <a class="block relative h-48 rounded overflow-hidden">
+                <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
+                  <a className="block relative h-48 rounded overflow-hidden">
                     <Image
                       alt="ecommerce"
-                      class="object-cover object-center w-full h-full block"
+                      className="object-cover object-center w-full h-full block"
                       src="/wom2.jpg"
                       width={200}
                       height={200}
                     />
                   </a>
-                  <div class="mt-4">
-                    <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">
+                  <div className="mt-4">
+                    <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">
                       CATEGORY
                     </h3>
-                    <h2 class="text-gray-900 title-font text-lg font-medium">
+                    <h2 className="text-gray-900 title-font text-lg font-medium">
                       The 400 Blows
                     </h2>
-                    <p class="mt-1">$18.40</p>
+                    <p className="mt-1">$18.40</p>
                   </div>
                 </div>
-                <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-                  <a class="block relative h-48 rounded overflow-hidden">
+                <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
+                  <a className="block relative h-48 rounded overflow-hidden">
                     <Image
                       alt="ecommerce"
-                      class="object-cover object-center w-full h-full block"
+                      className="object-cover object-center w-full h-full block"
                       src="/wom1.jpg"
                       width={200}
                       height={200}
                     />
                   </a>
-                  <div class="mt-4">
-                    <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">
+                  <div className="mt-4">
+                    <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">
                       CATEGORY
                     </h3>
-                    <h2 class="text-gray-900 title-font text-lg font-medium">
+                    <h2 className="text-gray-900 title-font text-lg font-medium">
                       The Catalyzer
                     </h2>
-                    <p class="mt-1">$16.00</p>
+                    <p className="mt-1">$16.00</p>
                   </div>
                 </div>
-                <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-                  <a class="block relative h-48 rounded overflow-hidden">
+                <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
+                  <a className="block relative h-48 rounded overflow-hidden">
                     <Image
                       alt="ecommerce"
-                      class="object-cover object-center w-full h-full block"
+                      className="object-cover object-center w-full h-full block"
                       src="/men4.jpg"
                       width={200}
                       height={200}
                     />
                   </a>
-                  <div class="mt-4">
-                    <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">
+                  <div className="mt-4">
+                    <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">
                       CATEGORY
                     </h3>
-                    <h2 class="text-gray-900 title-font text-lg font-medium">
+                    <h2 className="text-gray-900 title-font text-lg font-medium">
                       Shooting Stars
                     </h2>
-                    <p class="mt-1">$21.15</p>
+                    <p className="mt-1">$21.15</p>
                   </div>
                 </div>
-                <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-                  <a class="block relative h-48 rounded overflow-hidden">
+                <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
+                  <a className="block relative h-48 rounded overflow-hidden">
                     <Image
                       alt="ecommerce"
-                      class="object-cover object-center w-full h-full block"
+                      className="object-cover object-center w-full h-full block"
                       src="/men2.jpg"
                       width={200}
                       height={200}
                     />
                   </a>
-                  <div class="mt-4">
-                    <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">
+                  <div className="mt-4">
+                    <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">
                       CATEGORY
                     </h3>
-                    <h2 class="text-gray-900 title-font text-lg font-medium">
+                    <h2 className="text-gray-900 title-font text-lg font-medium">
                       Neptune
                     </h2>
-                    <p class="mt-1">$12.00</p>
+                    <p className="mt-1">$12.00</p>
                   </div>
                 </div>
-                <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-                  <a class="block relative h-48 rounded overflow-hidden">
+                <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
+                  <a className="block relative h-48 rounded overflow-hidden">
                     <Image
                       alt="ecommerce"
-                      class="object-cover object-center w-full h-full block"
+                      className="object-cover object-center w-full h-full block"
                       src="/men1.jpg"
                       width={200}
                       height={200}
                     />
                   </a>
-                  <div class="mt-4">
-                    <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">
+                  <div className="mt-4">
+                    <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">
                       CATEGORY
                     </h3>
-                    <h2 class="text-gray-900 title-font text-lg font-medium">
+                    <h2 className="text-gray-900 title-font text-lg font-medium">
                       The 400 Blows
                     </h2>
-                    <p class="mt-1">$18.40</p>
+                    <p className="mt-1">$18.40</p>
                   </div>
                 </div>
               </div>
@@ -369,67 +447,67 @@ const main = () => {
         </div>
       </section>
       {/* Image two */}
-      <section class="text-gray-600 body-font">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="flex flex-col text-center w-full mb-20">
-            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
+      <section className="text-gray-600 body-font">
+        <div className="container px-5 py-24 mx-auto">
+          <div className="flex flex-col text-center w-full mb-20">
+            <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
               We customise anything into anything
             </h1>
-            <p class="lg:w-2/3 mx-auto leading-relaxed text-base"></p>
+            <p className="lg:w-2/3 mx-auto leading-relaxed text-base"></p>
           </div>
-          <div class="flex flex-wrap md:-m-2 -m-1">
-            <div class="flex flex-wrap w-1/2">
-              <div class="md:p-2 p-1 w-1/2">
+          <div className="flex flex-wrap md:-m-2 -m-1">
+            <div className="flex flex-wrap w-1/2">
+              <div className="md:p-2 p-1 w-1/2">
                 <Image
                   alt="gallery"
-                  class="w-full object-cover h-full object-center block"
+                  className="w-full object-cover h-full object-center block"
                   src="/men4.jpg"
                   width={180}
                   height={180}
                 />
               </div>
-              <div class="md:p-2 p-1 w-1/2">
+              <div className="md:p-2 p-1 w-1/2">
                 <Image
                   alt="gallery"
-                  class="w-full object-cover h-full object-center block"
+                  className="w-full object-cover h-full object-center block"
                   src="/wom1.jpg"
                   width={90}
                   height={90}
                 />
               </div>
-              <div class="md:p-2 p-1 w-full">
+              <div className="md:p-2 p-1 w-full">
                 <Image
                   alt="gallery"
-                  class="w-full h-full object-cover object-center block"
+                  className="w-full h-full object-cover object-center block"
                   src="/men2.jpg"
                   width={90}
                   height={90}
                 />
               </div>
             </div>
-            <div class="flex flex-wrap w-1/2">
-              <div class="md:p-2 p-1 w-full">
+            <div className="flex flex-wrap w-1/2">
+              <div className="md:p-2 p-1 w-full">
                 <Image
                   alt="gallery"
-                  class="w-full h-full object-cover object-center block"
+                  className="w-full h-full object-cover object-center block"
                   src="/wom2.jpg"
                   width={90}
                   height={90}
                 />
               </div>
-              <div class="md:p-2 p-1 w-1/2">
+              <div className="md:p-2 p-1 w-1/2">
                 <Image
                   alt="gallery"
-                  class="w-full object-cover h-full object-center block"
+                  className="w-full object-cover h-full object-center block"
                   src="/wom3.jpg"
                   width={90}
                   height={90}
                 />
               </div>
-              <div class="md:p-2 p-1 w-1/2">
+              <div className="md:p-2 p-1 w-1/2">
                 <Image
                   alt="gallery"
-                  class="w-full object-cover h-full object-center block"
+                  className="w-full object-cover h-full object-center block"
                   src="/men1.jpg"
                   width={90}
                   height={90}
