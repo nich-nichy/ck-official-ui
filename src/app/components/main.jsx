@@ -222,23 +222,23 @@ const main = () => {
                   alt=""
                   className="rounded-xl"
                   width={150}
-                  height={170}
+                  height={150}
                 />
               </div>
               <div className="grid justify-items-stretch">
                 <Image
                   src="/Images/Hero/hoodie1.jpeg"
-                  alt=""
+                  alt="rounded-xl"
                   className=""
-                  width={120}
+                  width={110}
                   height={50}
                 />
                 <Image
                   src="/Images/Hero/random-gift.jpeg"
-                  alt=""
+                  alt="rounded-xl"
                   className=""
-                  width={120}
-                  height={50}
+                  width={110}
+                  height={60}
                 />
               </div>
             </div>
