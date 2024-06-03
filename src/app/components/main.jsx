@@ -68,12 +68,12 @@ const main = () => {
       {/* Navbar */}
       <Navbar handleDrawerOpen handleDrawerClose isLogin />
       {/* Hero */}
-      <div className="mt-5">
+      <div className="mt-5 hidden md:block">
         <div className="flex justify-center">
           <div className="flex flex-col items-center justify-center">
             <div className="flex flex-col max-w-7xl justify-center items-center space-y-3 w-full ">
               <div className="flex flex-col md:flex-row lg:flex-row space-x-2 space-y-3 md:space-x-4 w-full items-center justify-center ">
-                <div className="lg:w-40 w-18 h-32 overflow-hidden rounded-xl hero-lg-img-wrapper">
+                <div className="lg:w-40 w-12 h-32 overflow-hidden rounded-xl hero-lg-img-wrapper">
                   <Image
                     src="/Images/Hero/tshirt-anime.jpeg"
                     alt=""
@@ -158,6 +158,92 @@ const main = () => {
         </div>
         <script src="https://cdn.tailwindcss.com"></script>
         <script src="https://use.fontawesome.com/03f8a0ebd4.js"></script>
+      </div>
+
+      <div className="block md:hidden">
+        <div className="overflow-hidden">
+          <div className="flex my-2 mx-3 justify-evenly">
+            <div className="overflow-hidden rounded-xl">
+              <div className="grid justify-items-stretch">
+                <Image
+                  src="/Images/Hero/random-gift.jpeg"
+                  alt=""
+                  className=""
+                  width={130}
+                  height={70}
+                />
+                <div className="mx-1 my-2 mb-0">
+                  <div className="grid justify-items-stretch">
+                    <p
+                      className="font-semibold"
+                      style={{ fontSize: "40px", fontWeight: "" }}
+                    >
+                      We
+                    </p>
+                    <p
+                      className="text-base w-3/4 antialiased underline underline-offset-2 decoration-green-500 mb-1"
+                      style={{ fontSize: "30px" }}
+                    >
+                      speak
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <Image
+              src="/Images/Hero/tshirt-anime.jpeg"
+              alt=""
+              className="rounded-xl"
+              width={150}
+              height={200}
+            />
+          </div>
+          <p
+            className="text-center mt-5 mb-2"
+            style={{
+              fontSize: "20px",
+              paddingLeft: "40px",
+              paddingRight: "40px",
+            }}
+          >
+            the ultimate launguage called
+          </p>
+          <p
+            className="text-base font-bold text-center antialiased "
+            style={{ fontSize: "45px" }}
+          >
+            #printease
+          </p>
+          <div className="my-10">
+            <div className="flex my-2 mx-3 justify-evenly">
+              <div className="overflow-hidden rounded-xl">
+                <Image
+                  src="/Images/Hero/birthday.jpeg"
+                  alt=""
+                  className="rounded-xl"
+                  width={150}
+                  height={170}
+                />
+              </div>
+              <div className="grid justify-items-stretch">
+                <Image
+                  src="/Images/Hero/hoodie1.jpeg"
+                  alt=""
+                  className=""
+                  width={120}
+                  height={50}
+                />
+                <Image
+                  src="/Images/Hero/random-gift.jpeg"
+                  alt=""
+                  className=""
+                  width={120}
+                  height={50}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Explainer */}
