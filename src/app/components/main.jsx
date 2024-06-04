@@ -264,7 +264,7 @@ const main = () => {
             </div>
             <div className="col-span-1">
               <Image
-                src="/Images/Hero/choose-4.jpeg"
+                src="/Images/Hero/choose-6.jpeg"
                 alt="Image 3"
                 className="w-full h-64 object-cover"
                 width={300}
@@ -290,6 +290,20 @@ const main = () => {
                   <br /> Customised{" "}
                   <span className="font-montserrat">product</span>
                 </p>
+                <Image
+                  src="/Images/Hero/arrow-left.jpg"
+                  alt="Image 4"
+                  className="w-full object-cover"
+                  //                   {
+                  //     color: transparent;
+                  //     /* height: 600px; */
+                  //     width: 200px;
+                  //     rotate: 136deg;
+                  // }
+                  style={{ height: "600px", width: "700px" }}
+                  width={900}
+                  height={600}
+                />
               </div>
             </div>
           </div>
