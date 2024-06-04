@@ -96,8 +96,8 @@ const hero = () => {
                         the ultimate launguage called
                       </Typography>
                       <p
-                        className="text-base font-bold text-center antialiased mt-1  mb-4"
-                        style={{ fontSize: "45px" }}
+                        className="text-base font-bold text-center antialiased mt-3 mb-6"
+                        style={{ fontSize: "40px" }}
                       >
                         #printease
                       </p>
@@ -149,6 +149,7 @@ const hero = () => {
         <script src="https://cdn.tailwindcss.com"></script>
         <script src="https://use.fontawesome.com/03f8a0ebd4.js"></script>
       </div>
+      {/* Mobile */}
       <div className="block md:hidden">
         <div className="overflow-hidden">
           <div className="flex my-2 mx-3 justify-evenly">

@@ -37,7 +37,7 @@ const main = () => {
       >
         <Typography
           variant="h2"
-          className="text-center font-medium py-10 font-merienda"
+          className="text-center font-medium py-7 text-5xl font-merienda leading-relaxed"
         >
           <span className="">
             It's <span className="">Okay!</span>
@@ -50,17 +50,17 @@ const main = () => {
           </span>
         </Typography>
       </div>
-      {/* Events */}
+      {/* Specialisations */}
       <section
         className="text-gray-600 body-font"
         style={{ marginLeft: "150px", marginRight: "150px" }}
       >
         <div className="container px-5 mx-auto">
           <div className="flex flex-col text-center w-full">
-            <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
+            <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900 text-3xl">
               Products
             </h1>
-            <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
+            <p className="lg:w-2/3 mx-auto leading-relaxed text-2xl">
               Grab some items from top selling
             </p>
           </div>
@@ -234,12 +234,14 @@ const main = () => {
       </section>
       {/* Image two */}
       <section className="text-gray-600 body-font">
-        <div className="container px-5 py-24 mx-auto">
-          <div className="flex flex-col text-center w-full mb-20">
-            <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
-              We customise anything into anything
+        <div className="container px-5 mx-auto">
+          <div className="flex flex-col text-center w-full ">
+            <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900 text-3xl">
+              Event's
             </h1>
-            <p className="lg:w-2/3 mx-auto leading-relaxed text-base"></p>
+            <p className="lg:w-2/3 mx-auto leading-relaxed text-2xl mb-9">
+              Here's the success events we made for out customer's
+            </p>
           </div>
           <div className="flex flex-wrap md:-m-2 -m-1">
             <div className="flex flex-wrap w-1/2">
@@ -247,7 +249,7 @@ const main = () => {
                 <Image
                   alt="gallery"
                   className="w-full object-cover h-full object-center block"
-                  src="/men4.jpg"
+                  src="/Images/Hero/Baloon.jpeg"
                   width={180}
                   height={180}
                 />
@@ -256,7 +258,7 @@ const main = () => {
                 <Image
                   alt="gallery"
                   className="w-full object-cover h-full object-center block"
-                  src="/wom1.jpg"
+                  src="/Images/Hero/rain-baloon.jpeg"
                   width={90}
                   height={90}
                 />
