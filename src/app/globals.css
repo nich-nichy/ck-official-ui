@@ -4,7 +4,7 @@
 
 :root {
   --foreground-rgb: ''
-  --background-start-rgb: '';
+    --background-start-rgb: '';
   --background-end-rgb: '';
 }
 
@@ -18,12 +18,9 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
 
 @layer utilities {
@@ -34,4 +31,16 @@ body {
 
 .font-montserrat {
   font-family: 'Montserrat', sans-serif;
+}
+
+.font-merienda {
+  font-family: "Merienda", cursive;
+}
+
+.font-happymonkey {
+  font-family: "Happy Monkey", system-ui;
+}
+
+.font-caviche {
+  font-family: "Ceviche One", system-ui;
 }
