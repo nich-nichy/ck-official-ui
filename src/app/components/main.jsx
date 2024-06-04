@@ -246,7 +246,7 @@ const main = () => {
           <div className="grid grid-cols-3 gap-4">
             <div className="col-span-1">
               <Image
-                src="/Images/Hero/hoodie.jpeg"
+                src="/Images/Hero/choose-2.jpeg"
                 alt="Hoodie"
                 className="w-full h-64 object-cover"
                 width={300}
@@ -255,7 +255,7 @@ const main = () => {
             </div>
             <div className="col-span-1">
               <Image
-                src="/Images/Hero/hoodie.jpeg"
+                src="/Images/Hero/choose-4.jpeg"
                 alt="Image 2"
                 className="w-full h-64 object-cover"
                 width={300}
@@ -264,22 +264,33 @@ const main = () => {
             </div>
             <div className="col-span-1">
               <Image
-                src="/Images/Hero/hoodie.jpeg"
+                src="/Images/Hero/choose-4.jpeg"
                 alt="Image 3"
                 className="w-full h-64 object-cover"
                 width={300}
                 height={300}
               />
             </div>
-            <div className="col-span-3">
-              <Image
-                src="/Images/Hero/hoodie.jpeg"
-                alt="Image 4"
-                className="w-full object-cover"
-                style={{ height: "400px" }}
-                width={600}
-                height={300}
-              />
+            <div className="flex col-span-3">
+              <div className="">
+                <Image
+                  src="/Images/Hero/naruto-tshirt.png"
+                  alt="Image 4"
+                  className="w-full object-cover"
+                  style={{ height: "600px", width: "700px" }}
+                  width={900}
+                  height={600}
+                />
+              </div>
+              <div className="col-span-2 ml-5">
+                <p className="text-5xl font-xs leading-relaxed font-merienda">
+                  <span className="font-montserrat">Get your </span>
+                  <br />
+                  <span className="font-montserrat">Desired</span>
+                  <br /> Customised{" "}
+                  <span className="font-montserrat">product</span>
+                </p>
+              </div>
             </div>
           </div>
         </div>
