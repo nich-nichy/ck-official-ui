@@ -50,12 +50,12 @@ const main = () => {
           </span>
         </Typography>
       </div>
-      {/* Specialisations */}
+      {/* Products */}
       <section
-        className="text-gray-600 body-font"
+        className="text-gray-600 body-font mt-0"
         style={{ marginLeft: "150px", marginRight: "150px" }}
       >
-        <div className="container px-5 mx-auto">
+        <div className="container px-5 pt-0 mx-auto">
           <div className="flex flex-col text-center w-full">
             <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900 text-3xl">
               Products
@@ -232,8 +232,60 @@ const main = () => {
           </div>
         </div>
       </section>
-      {/* Image two */}
-      <section className="text-gray-600 body-font">
+      {/* Customisation */}
+      <section className="mx-20 mb-10">
+        <div className="container px-5 mx-auto">
+          <div className="flex flex-col text-center w-full">
+            <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900 text-3xl">
+              Customisation
+            </h1>
+            <p className="lg:w-2/3 mx-auto leading-relaxed text-2xl">
+              Customise anything into anything
+            </p>
+          </div>
+          <div className="grid grid-cols-3 gap-4">
+            <div className="col-span-1">
+              <Image
+                src="/Images/Hero/hoodie.jpeg"
+                alt="Hoodie"
+                className="w-full h-64 object-cover"
+                width={300}
+                height={300}
+              />
+            </div>
+            <div className="col-span-1">
+              <Image
+                src="/Images/Hero/hoodie.jpeg"
+                alt="Image 2"
+                className="w-full h-64 object-cover"
+                width={300}
+                height={300}
+              />
+            </div>
+            <div className="col-span-1">
+              <Image
+                src="/Images/Hero/hoodie.jpeg"
+                alt="Image 3"
+                className="w-full h-64 object-cover"
+                width={300}
+                height={300}
+              />
+            </div>
+            <div className="col-span-3">
+              <Image
+                src="/Images/Hero/hoodie.jpeg"
+                alt="Image 4"
+                className="w-full object-cover"
+                style={{ height: "400px" }}
+                width={600}
+                height={300}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Events */}
+      <section className="text-gray-600 body-font px-20">
         <div className="container px-5 mx-auto">
           <div className="flex flex-col text-center w-full ">
             <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900 text-3xl">
@@ -247,27 +299,27 @@ const main = () => {
             <div className="flex flex-wrap w-1/2">
               <div className="md:p-2 p-1 w-1/2">
                 <Image
-                  alt="gallery"
+                  src="/Images/Hero/bed-birthday.jpeg"
+                  alt="birthday-one"
                   className="w-full object-cover h-full object-center block"
-                  src="/Images/Hero/Baloon.jpeg"
                   width={180}
                   height={180}
                 />
               </div>
               <div className="md:p-2 p-1 w-1/2">
                 <Image
-                  alt="gallery"
+                  src="/Images/Hero/eighty-baloon.jpeg"
+                  alt="birthday-one"
                   className="w-full object-cover h-full object-center block"
-                  src="/Images/Hero/rain-baloon.jpeg"
-                  width={90}
-                  height={90}
+                  width={180}
+                  height={180}
                 />
               </div>
               <div className="md:p-2 p-1 w-full">
                 <Image
                   alt="gallery"
+                  src="/Images/Hero/rainbow.jpeg"
                   className="w-full h-full object-cover object-center block"
-                  src="/men2.jpg"
                   width={90}
                   height={90}
                 />
@@ -278,7 +330,7 @@ const main = () => {
                 <Image
                   alt="gallery"
                   className="w-full h-full object-cover object-center block"
-                  src="/wom2.jpg"
+                  src="/Images/Hero/violet-baloon.jpeg"
                   width={90}
                   height={90}
                 />
@@ -287,7 +339,7 @@ const main = () => {
                 <Image
                   alt="gallery"
                   className="w-full object-cover h-full object-center block"
-                  src="/wom3.jpg"
+                  src="/Images/Hero/baloon-normal-1.jpeg"
                   width={90}
                   height={90}
                 />
@@ -296,7 +348,7 @@ const main = () => {
                 <Image
                   alt="gallery"
                   className="w-full object-cover h-full object-center block"
-                  src="/men1.jpg"
+                  src="/birthday2.jpeg"
                   width={90}
                   height={90}
                 />
@@ -305,6 +357,7 @@ const main = () => {
           </div>
         </div>
       </section>
+
       {/* BestSellers */}
       {/* Trending */}
       {/* Footer */}
