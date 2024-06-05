@@ -51,21 +51,18 @@ const main = () => {
         </Typography>
       </div>
       {/* Products */}
-      <section
-        className="text-gray-600 body-font mt-0"
-        style={{ marginLeft: "150px", marginRight: "150px" }}
-      >
+      <section className="text-gray-600 body-font mt-0 product-wrapper">
         <div className="container px-5 pt-0 mx-auto">
           <div className="flex flex-col text-center w-full">
             <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900 text-3xl">
               Products
             </h1>
-            <p className="lg:w-2/3 mx-auto leading-relaxed text-2xl">
+            <p className="lg:w-2/3 mx-auto leading-relaxed text-md md:text-2xl">
               Grab some items from top selling
             </p>
           </div>
           <div className="text-gray-600 body-font">
-            <div className="container px-5 py-10 mx-auto">
+            <div className="container px-5 py-10 mx-4 md:mx-auto">
               <div className="flex flex-wrap -m-4">
                 <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
                   <a className="block relative h-48 rounded overflow-hidden">
@@ -233,17 +230,17 @@ const main = () => {
         </div>
       </section>
       {/* Customisation */}
-      <section className="mx-20 mb-10">
+      <section className="mx-2 mb-10 md:mx-20 md:mb-10">
         <div className="container px-5 mx-auto">
           <div className="flex flex-col text-center w-full">
             <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900 text-3xl">
               Customisation
             </h1>
-            <p className="lg:w-2/3 mx-auto leading-relaxed text-2xl">
+            <p className="lg:w-2/3 mx-auto leading-relaxed text-md md:text-2xl">
               Customise anything into anything
             </p>
           </div>
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid md:grid-cols-3 md:gap-4 ">
             <div className="col-span-1">
               <Image
                 src="/Images/Hero/choose-2.jpeg"
@@ -262,7 +259,7 @@ const main = () => {
                 height={300}
               />
             </div>
-            <div className="col-span-1">
+            <div className="col-span-1 hidden md:block">
               <Image
                 src="/Images/Hero/choose-6.jpeg"
                 alt="Image 3"
@@ -271,18 +268,31 @@ const main = () => {
                 height={300}
               />
             </div>
-            <div className="flex col-span-3">
+            {/* For mobile */}
+            <div className="block md:hidden">
+              <p className="text-center text-2xl font-happymonkey">THEN</p>
+              <div className="col-span-2">
+                <p className="text-2xl text-center font-xs leading-relaxed font-merienda">
+                  <span className="font-montserrat">Get your </span>
+                  <br />
+                  <span className="font-montserrat">Desired</span>
+                  <br /> Customised <br />
+                  <span className="font-montserrat">product</span>
+                </p>
+              </div>
+            </div>
+            <div className="block md:flex md:col-span-3">
               <div className="">
                 <Image
                   src="/Images/Hero/naruto-tshirt.png"
                   alt="Image 4"
-                  className="w-full object-cover"
-                  style={{ height: "600px", width: "700px" }}
+                  className="w-full object-cover naruto-img-wrapper"
+                  style=""
                   width={900}
                   height={600}
                 />
               </div>
-              <div className="col-span-2 ml-5">
+              <div className="col-span-2 ml-5 hidden md:block">
                 <p className="text-5xl font-xs leading-relaxed font-merienda">
                   <span className="font-montserrat">Get your </span>
                   <br />
@@ -290,7 +300,7 @@ const main = () => {
                   <br /> Customised{" "}
                   <span className="font-montserrat">product</span>
                 </p>
-                <div>
+                <div className="mt-6">
                   <Image
                     src="/Images/Hero/arrow-left.png"
                     alt="Image 4"
@@ -301,7 +311,7 @@ const main = () => {
                       marginTop: "10px",
                     }}
                     width={400}
-                    height={400}
+                    height={700}
                   />
                 </div>
               </div>
@@ -310,13 +320,13 @@ const main = () => {
         </div>
       </section>
       {/* Events */}
-      <section className="text-gray-600 body-font px-20">
+      <section className="text-gray-600 body-font px-2 md:px-20">
         <div className="container px-5 mx-auto">
           <div className="flex flex-col text-center w-full ">
             <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900 text-3xl">
               Event's
             </h1>
-            <p className="lg:w-2/3 mx-auto leading-relaxed text-2xl mb-9">
+            <p className="lg:w-2/3 mx-auto leading-relaxed text-md md:text-2xl mb-9">
               Here's the success events we made for out customer's
             </p>
           </div>
@@ -373,7 +383,7 @@ const main = () => {
                 <Image
                   alt="gallery"
                   className="w-full object-cover h-full object-center block"
-                  src="/birthday2.jpeg"
+                  src="/Images/Hero/birthday.jpeg"
                   width={90}
                   height={90}
                 />
@@ -388,7 +398,7 @@ const main = () => {
       {/* Footer */}
       <footer className="border-t text-gray-600 body-font">
         <div className="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
-          <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left md:mt-0 mt-10">
+          <div className="w-20 md:w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left md:mt-0 mt-10">
             <Image
               src="/ck-logo-salsa.png"
               width={200}
