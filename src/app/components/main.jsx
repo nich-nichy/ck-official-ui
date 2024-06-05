@@ -290,20 +290,20 @@ const main = () => {
                   <br /> Customised{" "}
                   <span className="font-montserrat">product</span>
                 </p>
-                <Image
-                  src="/Images/Hero/arrow-left.jpg"
-                  alt="Image 4"
-                  className="w-full object-cover"
-                  //                   {
-                  //     color: transparent;
-                  //     /* height: 600px; */
-                  //     width: 200px;
-                  //     rotate: 136deg;
-                  // }
-                  style={{ height: "600px", width: "700px" }}
-                  width={900}
-                  height={600}
-                />
+                <div>
+                  <Image
+                    src="/Images/Hero/arrow-left.png"
+                    alt="Image 4"
+                    className=""
+                    style={{
+                      height: "200px",
+                      rotate: "141deg",
+                      marginTop: "10px",
+                    }}
+                    width={400}
+                    height={400}
+                  />
+                </div>
               </div>
             </div>
           </div>
